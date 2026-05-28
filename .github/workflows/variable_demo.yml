@@ -5,4 +5,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Build phase
-        run: echo "Hello, ${{vars.MY_NAME}}
+        run: echo "Hello, ${{vars.MY_NAME}}"
