@@ -6,5 +6,8 @@ jobs:
     steps:
       - name: hello step
         run: |
-            echo "This is line one"
-            echo "This is line two"
+          echo "This is line one"
+          echo "This is line two"
+          echo "This is line three"
+          echo "This is line four"
+          echo "This is line five"
