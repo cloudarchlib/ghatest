@@ -1,20 +1,21 @@
-name: mulitiple jobs
+name: multiple jobs
 on: workflow_dispatch
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Build step
-        run: echo "A demo build"
+      - name: build phase
+        run: echo "Build Phase"
   test:
     runs-on: ubuntu-latest
     steps:
-      - name: Test step
-        run: echo "Test cases"
+    - name: test case
+      run: echo "Running test case"
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Deploy stage
-        run: echo "Deploy the app"
-       
+      - name: Deploy
+        run: echo "Deploy a app"
+      - 
+      - 
   
