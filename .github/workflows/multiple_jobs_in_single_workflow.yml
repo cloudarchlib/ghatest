@@ -16,6 +16,4 @@ jobs:
     steps:
       - name: Deploy
         run: echo "Deploy a app"
-      - 
-      - 
-  
+     
