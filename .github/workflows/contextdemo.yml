@@ -7,7 +7,8 @@ jobs:
       - name: use contect variables
         run: |
           echo " This workflow triggred by ${{github.actor}}"
-          echo " The repository name is ${{github.repository}}"  
+          echo " The repository name is ${{github.repository}}"
+          echo " The branch is ${{github.ref_name}}"
       - name: To print all the Github context variables
         run: echo " ${{toJson(github)}}"
     
