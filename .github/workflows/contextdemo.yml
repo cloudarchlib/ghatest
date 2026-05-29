@@ -1,0 +1,11 @@
+name: context variable demo
+on: push
+jobs:
+  context_demo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: use contect variables
+        run: |
+          echo " This workflow triggred by ${{github.actor}}"
+          echo " The repository name is ${{github.repository}}"   
+    
