@@ -1,0 +1,12 @@
+name: outputs sharing the data between steps
+on: push
+jobs:
+  steps1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: step1
+        id: step1
+        run: echo "version=0.0.1" >> $GITHUB_OUTPUT
+      - name: step2
+        run: echo "The output of the version ${{steps.steps1.outputs.version}}"
+      
