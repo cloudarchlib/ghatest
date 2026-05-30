@@ -1,0 +1,10 @@
+name: or condtion
+on: push
+jobs:
+  or_demo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run for user1 or cloudarchlib
+        if: github.actor == 'user1' || github.actor == 'cloudarchlib'
+        run: echo "it is triggred by either user1 or cloudarchlib"
+      
