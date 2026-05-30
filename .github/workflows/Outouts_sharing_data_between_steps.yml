@@ -1,12 +1,18 @@
 name: outputs sharing the data between steps
 on: push
 jobs:
-  steps1:
+  Build:
+    outputs:
+      version: ${{steps.step1.outputs.version}}
     runs-on: ubuntu-latest
     steps:
-      - name: step1
+      - name: Build step
         id: step1
         run: echo "version=0.0.1" >> $GITHUB_OUTPUT
-      - name: step2
-        run: echo "The output of the version ${{steps.step1.outputs.version}}"
+  Deploy:
+    needs: Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploying the app
+        run: echo "Deploying the app with version ${{needs.Build.outputs.version}}
       
